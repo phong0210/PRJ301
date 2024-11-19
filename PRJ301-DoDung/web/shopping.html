@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title> PKL Store </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>All you can buy</div>
+        <form action="MainController" method="POST">
+            Choose your favorite product: 
+            <select name="cmbProduct">
+                <option value="BOKR01-Book-2.5">Book-2.5$</option>
+                <option value="CAL03-Calculator-20.50">Calculator-20.50$</option>
+                <option value="NTBK01-Notebook-5.99">Notebook-5.99$</option>
+                <option value="PR001-Pen-1.25">Pen-1.25$</option>
+                <option value="Rul05-Ruler-3.5">Ruler-3.5$</option>
+            </select>
+            <select name="cmbQuantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="50">50</option>
+                
+            </select>
+            <input type="submit" name="action" value="Add"/>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>ADD NEW PRODUCT</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <style>
+            body {
+                font-family: Arial, sans-serif;
+                background: linear-gradient(to right, #cb117a9e, #25dcfcd4);
+                margin: 0;
+                padding: 20px;
+            }
+
+            form {
+                max-width: 500px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #ffffff;
+                border: 1px solid #dee2e6;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            form div {
+                margin-bottom: 15px;
+                font-weight: bold;
+            }
+
+            form input[type="text"],
+            form input[type="number"] {
+                width: 100%;
+                padding: 10px;
+                margin-top: 5px;
+                border: 1px solid #ced4da;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            form input[type="submit"],
+            form input[type="reset"] {
+                padding: 10px 20px;
+                margin-top: 10px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            form input[type="submit"] {
+                background-color: #007bff;
+                color: #ffffff;
+            }
+
+            form input[type="reset"] {
+                background-color: #ff0071;;
+                color: #ffffff;
+            }
+
+            form input[type="submit"]:hover {
+                background-color: #279710;
+            }
+
+            form input[type="reset"]:hover {
+                background-color: #3e82cc;
+            }
+
+            .type {
+                display: flex;
+                justify-content: space-between;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="MainController" method="POST">
+            <div> Add new product</div>
+            Product ID <input type="text" name="productID" required=""/>
+            </br> Product Name <input type="text" name="name" required=""/>
+            </br> Product price <input type="number" name="price" required=""/>
+            </br> Product quantity <input type="number" name="quantity" required=""/>
+            <div class="type">
+                <input type="submit" name="action" value="AddProduct" />
+                <input type="reset" value="Reset" />
+            </div>
+        </form>
+    </body>
+</html>

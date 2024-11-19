@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Create Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                background: linear-gradient(to right, #cb117a, #25dcfc);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 50px;
+            }
+            .container {
+                background: white;
+                padding: 40px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                width: 100%;
+                max-width: 400px;
+                text-align: center;
+            }
+            h1 {
+                margin-bottom: 30px;
+                color: #333;
+                font-size: 24px;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            label {
+                width: 100%;
+                text-align: left;
+                margin-bottom: 5px;
+                color: #333;
+                font-weight: bold;
+            }
+            input[type="text"],
+            input[type="password"] {
+                padding: 15px;
+                margin-bottom: 20px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                font-size: 16px;
+                width: 100%;
+                box-sizing: border-box;
+                transition: border-color 0.3s ease;
+            }
+            input[type="text"]:focus,
+            input[type="password"]:focus {
+                border-color: #007bff;
+                outline: none;
+            }
+            input[type="submit"],
+            input[type="reset"] {
+                padding: 15px;
+                border: none;
+                border-radius: 5px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.3s ease;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            input[type="submit"] {
+                background-color: #5548dd;
+                color: #fff9f9;
+                margin-top: 10px;
+            }
+            input[type="submit"]:hover {
+                background-color: #218838;
+                transform: scale(1.05);
+                
+            }
+            input[type="reset"] {
+                background-color: #dc3545;
+                color: white;
+                margin-top: 10px;
+            }
+            input[type="reset"]:hover {
+                background-color: #c82333;
+                transform: scale(1.05);
+            }
+            div{
+                font-size: 30px;
+                margin-bottom: 25px;
+            }
+            .type{
+                font-size: 30px;
+                margin-bottom: 25px;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+
+        <form action="MainController" method="POST">
+            <div> Create new user</div>
+            User ID <input type="text" name="userID" required=""/>
+            </br> Full Name <input type="text" name="fullName" required=""/>
+            </br> Role ID <input type="text" name="roleID" value="US" readonly=""/>
+            </br> Password <input type="password" name="password" required=""/>
+            </br> Confirm <input type="password" name="confirm" required=""/>
+            <div class="type">
+                <input type="submit" name="action" value="Create" />
+                <input type="reset" value="Reset" />
+            </div>
+        </form>
+
+    </body>
+</html>
